@@ -10,10 +10,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /usr/src/app
 RUN python setup.py install
-
+RUN pip install flask
 ENV FLASK_APP=flaskr
 ENV FLASK_ENV=development
-RUN docker flask init-db
+RUN flask init-db
 
 EXPOSE 5000
 
