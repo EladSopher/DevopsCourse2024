@@ -1,5 +1,5 @@
 FROM python:3.8.2-alpine
-COPY requirements.txt /app/requirements.txt
+COPY ./requirements.txt /app/requirements.txt
 COPY . /app
 WORKDIR /app
 RUN pip install --editable . 
