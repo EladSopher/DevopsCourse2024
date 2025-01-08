@@ -16,4 +16,4 @@ ENV FLASK_ENV=development
 
 EXPOSE 5000
 
-CMD ["flask init-db && flask run --host=0.0.0.0"]
+CMD ["sh", "-c","flask init-db && flask run --host=0.0.0.0"]
