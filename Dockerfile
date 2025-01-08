@@ -9,11 +9,11 @@ COPY requirements.txt /usr/src/app/requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /usr/src/app
-RUN flask init-db
 RUN python setup.py install
 
 ENV FLASK_APP=flaskr
 ENV FLASK_ENV=development
+RUN flask init-db
 
 EXPOSE 5000
 
