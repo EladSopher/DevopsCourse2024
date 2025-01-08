@@ -1,6 +1,6 @@
 FROM python:3.12-alpine
 WORKDIR /usr/src/app
-
+RUN pip install --upgrade pip setuptools wheel
 COPY requirements.txt /usr/src/app/requirements.txt
 
 COPY . /usr/src/app
