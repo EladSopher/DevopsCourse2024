@@ -13,7 +13,7 @@ RUN python setup.py install
 
 ENV FLASK_APP=flaskr
 ENV FLASK_ENV=development
-RUN flask init-db
+RUN docker flask init-db
 
 EXPOSE 5000
 
