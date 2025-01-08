@@ -1,4 +1,4 @@
-FROM python:latest
+FROM python:3.12-alpine
 WORKDIR /usr/src/app
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	gcc \
@@ -10,7 +10,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /usr/src/app
 RUN python setup.py install
-RUN pip install flask
 ENV FLASK_APP=flaskr
 ENV FLASK_ENV=development
 RUN flask init-db
