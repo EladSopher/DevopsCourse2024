@@ -1,6 +1,8 @@
 FROM python:3.12-alpine
-WORKDIR /usr/src/app
-RUN pip install -e . -r requirements.txt
+COPY . /app
+WORKDIR /app
+RUN pip install -e . 
+RUN pip install -r requirements.txt
 ENV FLASK_APP=flaskr
 ENV FLASK_ENV=development
 RUN flask init-db
