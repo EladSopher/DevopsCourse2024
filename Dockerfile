@@ -1,8 +1,5 @@
 FROM python:latest
 WORKDIR /usr/src/app
-RUN apt-get updae && apt-get install -y --no-install-recommends \
-	gcc \
-	&& rm -rf /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip setuptools wheel
 COPY requirements.txt /usr/src/app/requirements.txt
